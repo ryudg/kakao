@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <nav class="gnb">
+          <div class="logo">
+            <h1><a href="index">kakao</a></h1>
+          </div>
+          <div class="gnb_list">
+            <ul class="depth1">
+              <li class="depth1_list">
+                <button class="btn1">카카오</button>
+                <ul class="depth2 btn1_list">
+                  <li class="depth2_list"><a href="#">카카오문화</a></li>
+                  <li class="depth2_list"><a href="#">공동체</a></li>
+                  <li class="depth2_list"><a href="#">히스토리</a></li>
+                </ul>
+              </li>
+              <li class="depth1_list"><button>뉴스</button></li>
+              <li class="depth1_list"><button>기술과 서비스</button></li>
+              <li class="depth1_list"><button>약속과 책임</button></li>
+            </ul>
+          </div>
+          <div class="icon_box">
+            <ul class="icon">
+              <li>
+                <button>
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </li>
+              <li>
+                <button><i class="fa-solid fa-globe"></i></button>
+              </li>
+              <li>
+                <button><i class="fa-regular fa-moon"></i></button>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <nav class="hidden_gnb"></nav>
+      </header>
+      <main>
+        <section class="sec1">
+          <div class="sec1_textbox">
+            <p>
+              <span><i class="fa-solid fa-calendar-days"></i></span>
+              <span>오늘의 카카오<br />10월 29일 토요일 소식입니다</span>
+            </p>
+          </div>
+        </section>
+        <section class="sec2">
+          <article class="art1">
+            <div class="art1_box">
+              <div class="art1_box_title"></div>
+              <div class="art1_box_content"></div>
+            </div>
+          </article>
+          <article class="art2">
+            <div class="art2_box">
+              <div class="art2_content1 box"></div>
+              <div class="art2_content2 box"></div>
+              <div class="art2_content3 box"></div>
+            </div>
+          </article>
+        </section>
+      </main>
+    </div>
+    <script>
+      let btn1 = document.querySelector(".btn1");
+      let btn1_list = document.querySelector(".btn1_list");
+
+      btn1.addEventListener("click", function () {
+        btn1_list.classList.toggle("view");
+      });
+    </script>
+    <script
+      src="https://kit.fontawesome.com/67eff22c15.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

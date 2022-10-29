@@ -1,0 +1,229 @@
+body {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+.wrap {
+  width: 1440px;
+}
+/* header */
+header {
+  width: 1440px;
+  height: 80px;
+  position: fixed;
+  background: #fff;
+  z-index: 999;
+}
+header nav.gnb {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav.gnb div.logo h1 a {
+  font-size: 36px;
+  color: #000;
+}
+header nav.gnb div.gnb_list {
+  width: 40%;
+}
+header nav.gnb div.gnb_list ul.depth1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+header nav.gnb div.gnb_list ul.depth1 li.depth1_list {
+  position: relative;
+}
+header nav.gnb div.gnb_list ul.depth1 li.depth1_list button {
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+header nav.gnb div.gnb_list ul.depth1 li.depth1_list ul.btn1_list {
+  background: #000;
+  width: 250px;
+  height: 40px;
+  border-radius: 20px;
+  position: absolute;
+  top: 40px;
+  left: -20px;
+  display: none;
+}
+header nav.gnb div.gnb_list ul.depth1 li.depth1_list ul.btn1_list.view {
+  display: block;
+}
+header
+  nav.gnb
+  div.gnb_list
+  ul.depth1
+  li.depth1_list
+  ul.btn1_list
+  li.depth2_list {
+  display: inline-block;
+  padding: 12px;
+}
+header
+  nav.gnb
+  div.gnb_list
+  ul.depth1
+  li.depth1_list
+  ul.btn1_list
+  li.depth2_list
+  a:hover {
+  color: #fff;
+  font-weight: 600;
+}
+header nav.gnb div.gnb_list ul.depth1 li.depth1_list ul.btn1_list a {
+  color: #fff;
+}
+header nav.gnb div.icon_box {
+  width: 150px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header nav.gnb div.icon_box ul.icon {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav.gnb div.icon_box ul.icon button {
+  border: none;
+  background: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* main contents */
+main {
+  width: 100%;
+}
+
+/* sec1 */
+.sec1 {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 50px;
+}
+.sec1 .sec1_textbox {
+  font-size: 46px;
+  line-height: 1.5em;
+  font-weight: 600;
+}
+
+/* sec2 art1 */
+.sec2 {
+  width: 100%;
+  height: 700px;
+  display: flex;
+}
+.sec2 .art1,
+.sec2 .art2 {
+  width: 50%;
+}
+.sec2 .art1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.sec2 .art1 .art1_box {
+  width: 95%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+}
+.sec2 .art1 .art1_box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+.sec2 .art1 .art1_box .art1_box_title {
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+  height: 30%;
+  background: #fff;
+}
+.sec2 .art1 .art1_box .art1_box_content {
+  border-radius: 0 0 20px 20px;
+  width: 100%;
+  height: 70%;
+  background-image: url(./images/bn1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* sec2 art2 */
+.sec2 .art2 .art2_box {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.sec2 .art2 .box {
+  width: 300px;
+  height: 180px;
+  background: #fff;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  margin: 0 30px 30px 0;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+.sec2 .art2 .box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+}
+
+/* media */
+@media (max-width: 1440px) {
+  .wrap {
+    width: 1024px;
+  }
+  header {
+    width: 1024px;
+  }
+  .sec2 .art1 .art1_box .art1_box_content {
+    background-size: 100% 100%;
+  }
+  .sec2 .art1 .art1_box {
+    align-items: center;
+  }
+  .sec2 .art2 .art2_box {
+    justify-content: center;
+  }
+}
+@media (max-width: 1080px) {
+  .wrap {
+    width: 960px;
+  }
+  header nav.gnb {
+    width: 960px;
+  }
+  header nav.gnb div.gnb_list {
+    display: none;
+  }
+  header {
+    width: 100%;
+  }
+
+  .sec2 {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .sec2 .art1 {
+    width: 70%;
+    height: 820px;
+  }
+}
